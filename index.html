@@ -1,1 +1,1533 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physical Pharmacy - Exam Answer Sheet (Paper 2)</title>
+<style>
+:root{--bg:#ffffff;--bg2:#f8f9fa;--bg3:#e9ecef;--text:#212529;--text2:#495057;--text3:#6c757d;--accent:#0d6efd;--accent2:#0b5ed7;--border:#dee2e6;--shadow:0 2px 12px rgba(0,0,0,0.07);--shadow2:0 4px 20px rgba(0,0,0,0.1);--card:#ffffff;--highlight:#fff3cd;--highlightBorder:#ffc107;--tipBg:#d1ecf1;--tipBorder:#0c5460;--revBg:#e8f5e9;--revBorder:#2e7d32;--radius:12px;--navH:60px}
+.dark{--bg:#121212;--bg2:#1e1e1e;--bg3:#2d2d2d;--text:#e0e0e0;--text2:#b0b0b0;--text3:#888;--accent:#4dabf7;--accent2:#339af0;--border:#3a3a3a;--shadow:0 2px 12px rgba(0,0,0,0.3);--shadow2:0 4px 20px rgba(0,0,0,0.4);--card:#1e1e1e;--highlight:#3d3500;--highlightBorder:#ffc107;--tipBg:#0c3547;--tipBorder:#4dabf7;--revBg:#1b3a1b;--revBorder:#66bb6a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
+::selection{background:var(--accent);color:#fff}
+.topnav{position:fixed;top:0;left:0;right:0;height:var(--navH);background:var(--card);border-bottom:1px solid var(--border);box-shadow:var(--shadow);display:flex;align-items:center;padding:0 24px;z-index:1000;gap:16px;transition:all .3s}
+.topnav .subject{font-weight:700;font-size:1.05rem;color:var(--accent);white-space:nowrap}
+.topnav .links{display:flex;gap:6px;overflow-x:auto;flex:1;padding:4px 0;scrollbar-width:none}
+.topnav .links::-webkit-scrollbar{display:none}
+.topnav .links a{padding:5px 12px;border-radius:20px;font-size:.8rem;font-weight:600;color:var(--text2);text-decoration:none;white-space:nowrap;border:1px solid transparent;transition:all .2s}
+.topnav .links a:hover,.topnav .links a.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.search-box{position:relative}
+.search-box input{padding:7px 14px 7px 34px;border:1px solid var(--border);border-radius:20px;font-size:.85rem;background:var(--bg2);color:var(--text);width:180px;transition:all .3s;outline:none}
+.search-box input:focus{width:240px;border-color:var(--accent);box-shadow:0 0 0 3px rgba(13,110,253,.15)}
+.dark .search-box input:focus{box-shadow:0 0 0 3px rgba(77,171,247,.15)}
+.search-box svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text3)}
+.toggle-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all .2s;color:var(--text)}
+.toggle-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.main{max-width:860px;margin:0 auto;padding:calc(var(--navH) + 24px) 20px 60px}
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden;transition:all .3s}
+.q-card:hover{box-shadow:var(--shadow2)}
+.q-header{padding:16px 20px;display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none;border-bottom:1px solid transparent;transition:all .2s}
+.q-card.open .q-header{border-bottom-color:var(--border);background:var(--bg2)}
+.q-num{background:var(--accent);color:#fff;font-weight:700;font-size:.8rem;padding:5px 12px;border-radius:20px;white-space:nowrap}
+.q-title{font-weight:600;font-size:.95rem;color:var(--text);flex:1}
+.q-marks{font-size:.8rem;color:var(--text3);font-weight:600;background:var(--bg3);padding:3px 10px;border-radius:12px}
+.q-arrow{font-size:.9rem;color:var(--text3);transition:transform .3s}
+.q-card.open .q-arrow{transform:rotate(180deg)}
+.q-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.q-card.open .q-body{max-height:none}
+.q-content{padding:20px}
+.q-content p{margin-bottom:10px;color:var(--text2);font-size:.93rem}
+.q-content h4{font-size:1rem;color:var(--text);margin:16px 0 8px;font-weight:700}
+.q-content h5{font-size:.92rem;color:var(--text);margin:12px 0 6px;font-weight:600}
+.q-content ul,.q-content ol{margin:8px 0 12px 20px;color:var(--text2);font-size:.92rem}
+.q-content li{margin-bottom:4px}
+.q-content li strong{color:var(--text)}
+.highlight-box{background:var(--highlight);border-left:4px solid var(--highlightBorder);padding:12px 16px;border-radius:0 8px 8px 0;margin:12px 0;font-size:.9rem;color:var(--text)}
+.exam-tip{background:var(--tipBg);border-left:4px solid var(--tipBorder);padding:12px 16px;border-radius:0 8px 8px 0;margin:12px 0;font-size:.88rem}
+.exam-tip strong{color:var(--tipBorder);display:block;margin-bottom:3px}
+.dark .exam-tip strong{color:var(--accent)}
+.revision-note{background:var(--revBg);border-left:4px solid var(--revBorder);padding:12px 16px;border-radius:0 8px 8px 0;margin:12px 0;font-size:.88rem}
+.revision-note strong{color:var(--revBorder);display:block;margin-bottom:3px}
+.dark .revision-note strong{color:var(--revBorder)}
+.ascii-diagram{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;font-family:'Courier New',monospace;font-size:.82rem;line-height:1.4;overflow-x:auto;margin:12px 0;white-space:pre;color:var(--text2)}
+.eq-block{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 18px;margin:10px 0;font-size:.93rem;text-align:center;color:var(--text);font-weight:500}
+.copy-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid var(--border);border-radius:8px;background:var(--bg2);color:var(--text2);font-size:.8rem;cursor:pointer;transition:all .2s;margin-top:10px;font-weight:500}
+.copy-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.copy-btn.copied{background:#198754;color:#fff;border-color:#198754}
+.sub-label{display:inline-block;font-size:.78rem;font-weight:700;color:var(--accent);background:rgba(13,110,253,.08);padding:2px 10px;border-radius:10px;margin:10px 0 6px}
+.dark .sub-label{background:rgba(77,171,247,.12)}
+.or-badge{display:inline-block;font-size:.75rem;font-weight:700;color:#d63384;background:rgba(214,51,132,.1);padding:2px 10px;border-radius:10px;margin:10px 0 6px}
+.dark .or-badge{background:rgba(214,51,132,.15)}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.88rem}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+th{background:var(--bg2);font-weight:600;color:var(--text);font-size:.84rem}
+td{color:var(--text2)}
+.no-results{text-align:center;padding:60px 20px;color:var(--text3);font-size:1.1rem;display:none}
+.no-results span{font-size:2.5rem;display:block;margin-bottom:12px}
+.hero{text-align:center;padding:20px 0 10px}
+.hero h1{font-size:1.6rem;font-weight:800;color:var(--text);margin-bottom:4px}
+.hero p{color:var(--text3);font-size:.9rem}
+.expand-all{padding:8px 18px;border:1px solid var(--border);border-radius:8px;background:var(--bg2);color:var(--text2);font-size:.82rem;cursor:pointer;transition:all .2s;font-weight:600}
+.expand-all:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media(max-width:768px){
+.topnav{padding:0 12px;gap:8px}
+.topnav .subject{font-size:.9rem}
+.search-box input{width:120px}.search-box input:focus{width:160px}
+.q-header{padding:12px 14px}.q-content{padding:14px}
+.q-title{font-size:.88rem}
+.main{padding:calc(var(--navH) + 16px) 12px 40px}
+.hero h1{font-size:1.3rem}
+}
+@media(max-width:480px){
+.topnav .links a{padding:4px 8px;font-size:.72rem}
+.nav-right{gap:6px}
+.toggle-btn{width:32px;height:32px;font-size:.9rem}
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+<div class="subject">Physical Pharmacy</div>
+<div class="links" id="navLinks">
+<a href="#q1" data-q="q1">Q1</a>
+<a href="#q2" data-q="q2">Q2</a>
+<a href="#q3" data-q="q3">Q3</a>
+<a href="#q4" data-q="q4">Q4</a>
+<a href="#q5" data-q="q5">Q5</a>
+<a href="#q6" data-q="q6">Q6</a>
+<a href="#q7" data-q="q7">Q7</a>
+</div>
+<div class="nav-right">
+<div class="search-box">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+<input type="text" id="searchInput" placeholder="Search questions...">
+</div>
+<button class="toggle-btn" id="darkToggle" title="Toggle Dark Mode">&#9790;</button>
+<button class="expand-all" id="expandAll">Expand All</button>
+</div>
+</nav>
+
+<div class="main">
+<div class="hero">
+<h1>Physical Pharmacy - Complete Answer Sheet (Paper 2)</h1>
+<p>GTU Exam Preparation | All Questions with Diagrams, Equations &amp; Tips</p>
+</div>
+
+<div class="no-results" id="noResults"><span>&#128269;</span>No matching questions found</div>
+
+<!-- Q1 -->
+<div class="q-card open" id="q1" data-search="lyophilic lyophobic colloids association DLVO theory kinetic properties">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.1</span>
+<span class="q-title">Lyophilic vs Lyophobic Colloids | DLVO Theory | Kinetic Properties</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q1">
+
+<div class="sub-label">(a) Lyophilic vs Lyophobic Colloids &amp; Association Colloids [06 Marks]</div>
+
+<h4>Differentiation Between Lyophilic and Lyophobic Colloids:</h4>
+
+<table>
+<tr><th>Parameter</th><th>Lyophilic Colloids</th><th>Lyophobic Colloids</th></tr>
+<tr><td><strong>Meaning</strong></td><td>Liquid-loving (solvent-attracting)</td><td>Liquid-hating (solvent-repelling)</td></tr>
+<tr><td><strong>Nature of Interaction</strong></td><td>Strong affinity between dispersed phase and dispersion medium</td><td>Very little affinity between dispersed phase and dispersion medium</td></tr>
+<tr><td><strong>Preparation</strong></td><td>Simply mixed with medium (e.g., gelatin + water); no special method needed</td><td>Require special methods (condensation or dispersion methods)</td></tr>
+<tr><td><strong>Reversibility</strong></td><td>Reversible: if dried, can be redispersed by adding solvent</td><td>Irreversible: once coagulated, cannot be redispersed</td></tr>
+<tr><td><strong>Stability</strong></td><td>Highly stable due to solvation (hydration shell)</td><td>Less stable; easily coagulated by small amounts of electrolyte</td></tr>
+<tr><td><strong>Charge</strong></td><td>Charge depends on pH; may be positive or negative</td><td>Always carry a definite charge (positive or negative)</td></tr>
+<tr><td><strong>Viscosity</strong></td><td>Higher than the medium (due to solvation)</td><td>Nearly same as the dispersion medium</td></tr>
+<tr><td><strong>Tyndall Effect</strong></td><td>Less distinct (weaker scattering)</td><td>Very distinct (strong scattering)</td></tr>
+<tr><td><strong>Electrolyte Effect</strong></td><td>Large amounts of electrolyte needed for coagulation (salting out)</td><td>Very small amounts cause coagulation (Schulze-Hardy rule)</td></tr>
+<tr><td><strong>Surface Tension</strong></td><td>Lowered significantly</td><td>Same as the dispersion medium</td></tr>
+<tr><td><strong>Examples</strong></td><td>Gelatin, starch, gum arabic, albumin, soap solutions</td><td>Colloidal gold, colloidal silver, As<sub>2</sub>S<sub>3</sub> sol, metal hydroxide sols</td></tr>
+</table>
+
+<h4>Association Colloids:</h4>
+<p><strong>Definition:</strong> Association colloids are substances that behave as <strong>true molecular solutions at low concentrations</strong> but form <strong>colloidal aggregates (micelles)</strong> above a specific concentration called the <strong>Critical Micelle Concentration (CMC)</strong>.</p>
+
+<h5>Key Characteristics:</h5>
+<ul>
+<li>The molecules are <strong>amphiphilic</strong> (contain both hydrophilic and lipophilic parts) &ndash; e.g., soaps, detergents, surfactants.</li>
+<li>Below CMC: exist as individual molecules (true solution, low molecular weight).</li>
+<li>Above CMC: molecules aggregate to form <strong>micelles</strong> (colloidal size, 1&ndash;100 nm), exhibiting colloidal properties.</li>
+<li>The formation of micelles is <strong>reversible</strong> and <strong>spontaneous</strong> (thermodynamically favored).</li>
+<li>Micellar structure: hydrophilic heads face outward (toward water), lipophilic tails face inward (away from water) &ndash; normal micelles in aqueous medium.</li>
+</ul>
+
+<div class="ascii-diagram">
+  Below CMC (True Solution):     Above CMC (Colloidal Micelles):
+
+     Individual molecules           Micelle
+     scattered randomly             
+                                    &#9572;&#9584; &#9584; &#9584; &#9584;&#9585;
+  &#9584;  &#9584;    &#9584;                  &#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;
+    &#9584;     &#9584;                    &#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;
+       &#9584;       &#9584;                &#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;
+  &#9584;   &#9584;   &#9584;   &#9584;            &#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;
+                                    &#9585;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9585;
+                                      &#9584; &#9584; &#9584; &#9584;
+  &#9584; = surfactant molecule
+  Tail &#9584; = Lipophilic (hydrocarbon chain)
+  Head O = Hydrophilic (ionic/polar group)
+</div>
+
+<p><strong>Examples:</strong> Sodium lauryl sulfate (SLS), polysorbates (Tween), bile salts, phospholipids.</p>
+<p><strong>Pharmaceutical Importance:</strong> Micelles are used for drug solubilization (poorly water-soluble drugs get entrapped in the hydrophobic core), enhancing bioavailability.</p>
+
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> The key differentiator is the "affinity" with medium. Lyophilic = reversible + stable + low Tyndall. Lyophobic = irreversible + unstable + strong Tyndall. Association colloids are a special category &ndash; mention CMC always.
+</div>
+
+<div class="sub-label">(b) DLVO Theory with Energy Curve [05 Marks]</div>
+
+<h4>DLVO Theory:</h4>
+<p><strong>Full Form:</strong> <strong>D</strong>erjaguin, <strong>L</strong>andau, <strong>V</strong>erwey, and <strong>O</strong>verbeek (1941&ndash;1948).</p>
+
+<p><strong>Concept:</strong> DLVO theory explains the stability of lyophobic colloidal dispersions by considering the <strong>net interaction energy</strong> between two approaching particles as the sum of two opposing forces:</p>
+
+<ol>
+<li><strong>Attractive Energy (V<sub>A</sub>):</strong> Due to <strong>van der Waals forces</strong> between particles. This is always negative (attractive) and favors aggregation/coagulation. It varies inversely with the square of the interparticle distance (H): V<sub>A</sub> &prop; &minus;1/H<sup>2</sup>.</li>
+<li><strong>Repulsive Energy (V<sub>R</sub>):</strong> Due to <strong>overlap of electrical double layers</strong> on approaching particles. This is always positive (repulsive) and prevents aggregation. It depends on surface potential, electrolyte concentration, and decays exponentially with distance.</li>
+</ol>
+
+<div class="eq-block"><strong>V<sub>T</sub> = V<sub>A</sub> + V<sub>R</sub></strong></div>
+
+<p>Where V<sub>T</sub> = total interaction energy between two particles.</p>
+
+<h5>DLVO Energy Curve:</h5>
+
+<div class="ascii-diagram">
+  Energy (V<sub>T</sub>)
+       │
+  Vmax ├──&#9584;&#9584; Secondary
+       │   ╲  minimum     Primary
+       │    ╲   (metastable)  minimum
+       │     ╲      &#9584;&#9584;&#9584;╲
+       │      ╲    ╱      ╲
+       │       ╲  ╱        ╲
+       │        ╲╱          ╲
+  ─────┼─────────&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;&#9584;──── Distance (H)
+       │      V<sub>R</sub> dominates   V<sub>A</sub> dominates
+       │      
+       │  V<sub>R</sub> = Repulsive (positive)
+       │  V<sub>A</sub> = Attractive (negative, below axis)
+</div>
+
+<p><strong>Key Features of the Energy Curve:</strong></p>
+<ul>
+<li><strong>Primary Maximum (V<sub>max</sub>):</strong> The energy barrier that particles must overcome to aggregate. If V<sub>max</sub> &gt; 15 kT, the dispersion is stable (thermal energy cannot overcome the barrier). If V<sub>max</sub> &lt; 5 kT, rapid coagulation occurs.</li>
+<li><strong>Secondary Minimum:</strong> A shallow energy well at larger interparticle distance. Particles here are <strong>weakly attracted</strong> forming a loose network (flocculation). This is reversible &ndash; particles can be redispersed by gentle agitation.</li>
+<li><strong>Primary Minimum:</strong> A deep energy well at very small separation. Particles here are <strong>strongly bound</strong> (coagulation/coalescence). This is essentially irreversible.</li>
+</ul>
+
+<h5>Application in Stabilizing Colloidal Dispersions:</h5>
+<ol>
+<li><strong>Increasing Zeta Potential:</strong> Higher surface charge &rarr; greater V<sub>R</sub> &rarr; higher V<sub>max</sub> &rarr; more stable colloid. Achieved by adding ionic surfactants or adjusting pH.</li>
+<li><strong>Reducing Ionic Strength:</strong> Lower electrolyte concentration &rarr; extended double layer &rarr; greater V<sub>R</sub> at a given distance. Adding excess electrolyte compresses the double layer, reducing V<sub>R</sub> and causing coagulation (Schulze-Hardy rule).</li>
+<li><strong>Controlling Particle Size:</strong> Smaller particles have lower V<sub>A</sub>, making it easier to stabilize.</li>
+<li><strong>Optimizing Flocculation:</strong> By adjusting conditions to create a secondary minimum without a significant primary maximum, controlled flocculation can be achieved (desirable in pharmaceutical suspensions).</li>
+</ol>
+
+<div class="highlight-box">
+<strong>Key Insight:</strong> A stable colloid has a tall energy barrier (V<sub>max</sub>). Adding electrolyte compresses the double layer &rarr; lowers V<sub>R</sub> &rarr; reduces V<sub>max</sub> &rarr; particles fall into primary minimum &rarr; coagulation. This is why lyophobic colloids are sensitive to electrolytes.
+</div>
+
+<div class="sub-label">(c) Properties of Colloids &ndash; Kinetic Properties [05 Marks]</div>
+
+<h4>Different Properties of Colloids:</h4>
+<ol>
+<li><strong>Optical Properties:</strong> Tyndall effect, Faraday-Tyndall effect, Brownian motion (also kinetic), electron microscopy for visualization.</li>
+<li><strong>Kinetic Properties:</strong> Brownian motion, diffusion, sedimentation, osmotic pressure.</li>
+<li><strong>Electrical Properties:</strong> Electrophoresis, electroosmosis, streaming potential, sedimentation potential (Dorn effect).</li>
+<li><strong>Colligative Properties:</strong> Osmotic pressure, boiling point elevation, freezing point depression (very small due to large particle size).</li>
+<li><strong>Surface Properties:</strong> Adsorption (Gibbs, Langmuir adsorption), large surface area to volume ratio.</li>
+<li><strong>Stability Properties:</strong> Coagulation, flocculation, protective colloid action, gold number.</li>
+</ol>
+
+<h4>Kinetic Properties (Detailed):</h4>
+
+<p><strong>1. Brownian Motion:</strong></p>
+<ul>
+<li>Random, zigzag movement of colloidal particles due to <strong>unequal bombardment by solvent molecules</strong>.</li>
+<li>Discovered by Robert Brown (1827) for pollen grains.</li>
+<li>More pronounced for smaller particles and at higher temperatures.</li>
+<li><strong>Einstein's equation for mean displacement:</strong></li>
+</ul>
+<div class="eq-block">x&#772; = &radic;(RTt / 3&pi;&eta;N<sub>A</sub>r)</div>
+<p>Where: x&#772; = mean displacement in time t, R = gas constant, T = absolute temperature, &eta; = viscosity, N<sub>A</sub> = Avogadro's number, r = particle radius.</p>
+
+<p><strong>2. Diffusion:</strong></p>
+<ul>
+<li>Colloidal particles diffuse from high to low concentration, though much slower than molecules.</li>
+<li><strong>Einstein's diffusion equation:</strong></li>
+</ul>
+<div class="eq-block">D = RT / (6&pi;&eta;rN<sub>A</sub>) = kT / (6&pi;&eta;r)</div>
+<p>Where D = diffusion coefficient (cm&sup2;/s). This equation connects diffusion with particle size.</li>
+
+<p><strong>3. Sedimentation:</strong></p>
+<ul>
+<li>Due to gravitational force, denser particles settle. Brownian motion opposes settling.</li>
+<li><strong>Stokes' Law for sedimentation velocity:</strong></li>
+</ul>
+<div class="eq-block">v = 2r&sup2;(&rho; &minus; &rho;<sub>0</sub>)g / (9&eta;)</div>
+<p>Where v = sedimentation velocity, r = radius, &rho; = particle density, &rho;<sub>0</sub> = medium density, g = gravitational acceleration.</li>
+
+<p><strong>4. Osmotic Pressure:</strong></p>
+<ul>
+<li>Colloidal solutions exert osmotic pressure, but it is very low because of large molecular weight.</li>
+</ul>
+<div class="eq-block">&pi; = cRT / M (Van't Hoff equation)</div>
+
+<div class="revision-note">
+<strong>&#128218; Short Revision Note:</strong> Kinetic properties = motion-related. Brownian motion (Einstein equation), Diffusion (D = kT/6&pi;&eta;r), Sedimentation (Stokes law), Osmotic pressure. All relate particle size (r) to observable motion.
+</div>
+
+</div></div>
+</div>
+
+<!-- Q2 -->
+<div class="q-card" id="q2" data-search="particle size optical microscopy surface area air permeability angle repose carr index">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.2</span>
+<span class="q-title">Particle Size &ndash; Optical Microscopy | Surface Area &ndash; Air Permeability | Flow Properties</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q2">
+
+<div class="sub-label">(a) Methods of Particle Size Determination &amp; Optical Microscopy [06 Marks]</div>
+
+<h4>Methods for Particle Size Determination:</h4>
+<ol>
+<li><strong>Microscopy Method:</strong> Optical microscopy (0.2&ndash;100 &mu;m), Electron microscopy (0.001&ndash;5 &mu;m)</li>
+<li><strong>Sieving Method:</strong> Standard sieve analysis (20&ndash;125,000 &mu;m)</li>
+<li><strong>Sedimentation Method:</strong> Andreasen pipette, Pipette method (1&ndash;200 &mu;m)</li>
+<li><strong>Electrical Sensing Zone:</strong> Coulter counter (0.5&ndash;500 &mu;m)</li>
+<li><strong>Laser Diffraction:</strong> Fraunhofer/Mie theory (0.1&ndash;3000 &mu;m)</li>
+<li><strong>Dynamic Light Scattering (PCS):</strong> Photon correlation spectroscopy (0.003&ndash;3 &mu;m)</li>
+<li><strong>Air Permeability:</strong> Fisher sub-sieve sizer (indirect, surface-weighted)</li>
+</ol>
+
+<h4>Optical Microscopy Method &ndash; Detailed:</h4>
+
+<p><strong>Principle:</strong> Direct visual measurement of particle dimensions using a calibrated optical microscope. The particle size is determined by comparing the particle image to a calibrated eyepiece graticule (scale) at a known magnification.</p>
+
+<p><strong>Range:</strong> 0.2 &mu;m to 100 &mu;m (practical lower limit ~0.5 &mu;m due to light diffraction).</p>
+
+<h5>Procedure:</h5>
+<ol>
+<li><strong>Sample Preparation:</strong> A small quantity of powder is dispersed in a non-solvent liquid (e.g., mineral oil for water-soluble drugs, liquid paraffin). The dispersion is sonicated to break agglomerates.</li>
+<li><strong>Mounting:</strong> A drop of dispersion is placed on a clean glass slide, covered with a coverslip. The preparation should be thin enough for single-layer particle arrangement.</li>
+<li><strong>Calibration:</strong> A stage micrometer (standard scale with known divisions, e.g., 0.01 mm/division) is used to calibrate the eyepiece graticule at each magnification used.</li>
+<li><strong>Measurement:</strong> Particles are viewed under the microscope. The graticule is used to measure particle dimensions. Typically, <strong>Feret's diameter</strong> (distance between two parallel tangents) or <strong>Martin's diameter</strong> (length of the line that bisects the particle area) or <strong>projected area diameter</strong> is measured.</li>
+<li><strong>Counting:</strong> At least 200&ndash;500 particles are measured for statistical reliability.</li>
+<li><strong>Data Analysis:</strong> Size distribution is plotted as frequency vs. size class. Number mean diameter, weight mean diameter, etc. are calculated.</li>
+</ol>
+
+<div class="ascii-diagram">
+       ┌──────────────────────┐
+       │     Eyepiece with    │
+       │     Graticule        │
+       ├──────────────────────┤
+       │                      │
+       │    Objective Lens    │
+       │                      │
+       ├──────────────────────┤
+       │                      │
+       │   ┌──┐  ┌────┐       │
+       │   │  │  │    │       │  &larr; Particles on
+       │   └──┘  └────┘       │    glass slide
+       │                      │
+       ├──────────────────────┤
+       │   Glass Slide        │
+       │   with Sample        │
+       ├──────────────────────┤
+       │   Stage with         │
+       │   Stage Micrometer   │
+       └──────────────────────┘
+</div>
+
+<h5>Types of Diameters Measured:</h5>
+<ul>
+<li><strong>Feret's Diameter:</strong> Distance between two parallel tangents on opposite sides of the particle.</li>
+<li><strong>Martin's Diameter:</strong> Length of a line that bisects the projected area of the particle (parallel to a fixed direction).</li>
+<li><strong>Projected Area Diameter:</strong> Diameter of a circle having the same projected area as the particle.</li>
+</ul>
+
+<h5>Advantages:</h5>
+<ul>
+<li>Direct observation of particle shape and morphology</li>
+<li>Simple, inexpensive equipment</li>
+<li>Can distinguish between primary particles and agglomerates</li>
+</ul>
+<h5>Limitations:</h5>
+<ul>
+<li>Time-consuming (manual measurement)</li>
+<li>Subject to operator bias</li>
+<li>Only 2D projection measured, not true 3D size</li>
+<li>Lower size limit restricted by light wavelength</li>
+</ul>
+
+<div class="sub-label">(b) Classification of Surface Area Methods &amp; Air Permeability Method [05 Marks]</div>
+
+<h4>Classification of Surface Area Determination Methods:</h4>
+<ol>
+<li><strong>Permeability Methods (Air Permeability):</strong>
+  <ul>
+  <li>Lea &amp; Nurse method</li>
+  <li>Fisher Sub-Sieve Sizer</li>
+  </ul>
+  <em>Principle: Resistance to airflow through powder bed</em>
+</li>
+<li><strong>Adsorption Methods:</strong>
+  <ul>
+  <li>BET method (Nitrogen adsorption)</li>
+  <li>Static adsorption</li>
+  </ul>
+  <em>Principle: Multilayer gas adsorption on particle surface</em>
+</li>
+<li><strong>Calculation from Particle Size Distribution:</strong>
+  <ul>
+  <li>Using volume-surface mean diameter (Sauter mean diameter, d<sub>vs</sub>)</li>
+  <li>S = 6 / (&rho; &times; d<sub>vs</sub>)</li>
+  </ul>
+</li>
+<li><strong>Heat of Immersion Method:</strong> Heat released when powder is immersed in liquid is proportional to surface area.</li>
+<li><strong>Methylene Blue Adsorption Method:</strong> Used for clays; amount of dye adsorbed relates to surface area.</li>
+</ol>
+
+<h4>Air Permeability Method (Lea &amp; Nurse) with Diagram:</h4>
+
+<p><strong>Principle:</strong> Based on the <strong>Kozeny-Carman equation</strong>. When air flows through a packed bed of powder, the pressure drop depends on the specific surface area. Finer particles offer greater resistance to airflow due to larger total surface area, resulting in a higher pressure drop.</p>
+
+<div class="ascii-diagram">
+    ┌─────────────────────────────────────────┐
+    │           AIR PERMEABILITY APPARATUS    │
+    │                                         │
+    │     Manometer         Powder Cell       │
+    │    ┌───┬───┐        ┌───────────┐       │
+    │    │   │ h │        │           │       │
+    │    │   │   │        │  Powder   │       │
+    │    │   │   │        │  Bed (L)  │       │
+    │    │   │ &#9584; │        │           │       │
+    │    ├───┴───┤  Air   │           │       │
+    │    │       │&#8594;&#8594;&#8594;&#8594;&#8594;│&rarr; &rarr; &rarr; │&rarr; Air  │
+    │    │  Liquid│  Flow   │  through   │ out    │
+    │    │       │        │  pores    │       │
+    │    └───────┘        └───────────┘       │
+    │                                         │
+    │    &#916;P = &#961;gh (pressure drop)          │
+    │    A = Cross-section area of bed         │
+    │    L = Bed height                        │
+    └─────────────────────────────────────────┘
+</div>
+
+<p><strong>Kozeny-Carman Equation:</strong></p>
+<div class="eq-block">S<sub>0</sub> = [14 &epsilon; / (1 &minus; &epsilon;)] &times; &radic;[(&Delta;P &times; A &times; t) / (&eta; &times; L &times; m)]</div>
+
+<p>Where: S<sub>0</sub> = specific surface area (cm&sup2;/g), &epsilon; = porosity of powder bed, &Delta;P = pressure drop (&rho;gh), A = bed cross-sectional area, t = time of airflow, &eta; = viscosity of air, L = bed height, m = mass of powder.</p>
+
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Powder is packed into a cylindrical cell of known cross-section (A) to a known porosity (&epsilon;).</li>
+<li>Air is drawn through the bed at a constant pressure differential (&Delta;P) measured by a manometer.</li>
+<li>The time (t) for a fixed volume of air to pass through the bed is measured.</li>
+<li>Specific surface area is calculated using the Kozeny-Carman equation.</li>
+</ol>
+
+<p><strong>Fisher Sub-Sieve Sizer:</strong> A commercial instrument that directly reads the average particle diameter from a calibrated chart based on the same principle.</p>
+
+<div class="highlight-box">
+<strong>Note:</strong> Air permeability measures <strong>external surface area only</strong> (not internal pores). BET method measures <strong>total surface area</strong> (external + internal pores). For non-porous particles, both give similar results.
+</div>
+
+<div class="sub-label">(c) Angle of Repose &amp; Carr's Index with Pharmacopoeial Specification [05 Marks]</div>
+
+<h4>1. Angle of Repose (&theta;):</h4>
+<p><strong>Definition:</strong> The maximum angle between the surface of a cone of powder and the horizontal plane. It reflects interparticulate friction.</p>
+
+<p><strong>Determination:</strong> Powder is allowed to flow through a funnel onto a flat surface, forming a cone. Height (h) and radius (r) are measured.</p>
+<div class="eq-block">&theta; = tan<sup>&minus;1</sup>(h / r)</div>
+
+<table>
+<tr><th>Angle of Repose</th><th>Flow Character</th></tr>
+<tr><td>&lt; 25&deg;</td><td>Excellent / Free flowing</td></tr>
+<tr><td>25&ndash;30&deg;</td><td>Good flow</td></tr>
+<tr><td>30&ndash;40&deg;</td><td>Passable flow</td></tr>
+<tr><td>&gt; 40&deg;</td><td>Poor flow</td></tr>
+<tr><td>&gt; 55&deg;</td><td>Very poor / Cohesive</td></tr>
+</table>
+
+<h4>2. Carr's Index (Compressibility Index, CI):</h4>
+<p><strong>Definition:</strong> Percentage ratio of the difference between tapped and bulk density to tapped density.</p>
+<div class="eq-block">CI (%) = [(Tapped density &minus; Bulk density) / Tapped density] &times; 100</div>
+
+<p><strong>Determination:</strong> Bulk density is measured by pouring powder into a graduated cylinder. Tapped density is measured after tapping the cylinder (usually 500&ndash;1250 taps) until constant volume is achieved.</p>
+
+<table>
+<tr><th>Carr's Index (%)</th><th>Flow Character</th></tr>
+<tr><td>5&ndash;15</td><td>Excellent flow</td></tr>
+<tr><td>12&ndash;16</td><td>Good flow</td></tr>
+<tr><td>18&ndash;21</td><td>Fair to passable</td></tr>
+<tr><td>23&ndash;35</td><td>Poor flow</td></tr>
+<tr><td>33&ndash;38</td><td>Very poor flow</td></tr>
+<tr><td>&gt; 40</td><td>Extremely poor flow</td></tr>
+</table>
+
+<div class="highlight-box">
+<strong>Pharmacopoeial Specification:</strong> IP/BP/USP general chapters on powder flow recognize both methods. For direct compression formulations, Carr's Index should ideally be &le; 15% and angle of repose &le; 30&deg;. A Carr's Index &gt; 25% indicates need for flow improvement (glidants, granulation).
+</div>
+
+</div></div>
+</div>
+
+<!-- Q3 -->
+<div class="q-card" id="q3" data-search="sedimentation suspension emulsion instability emulsifying agent mechanism">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.3</span>
+<span class="q-title">Sedimentation Parameters | Emulsion Instability | Emulsifying Agent Mechanisms</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q3">
+
+<div class="sub-label">(a) Sedimentation Parameters of Suspension [06 Marks]</div>
+
+<p><strong>Sedimentation</strong> is the settling of suspended particles under the influence of gravity. The key parameters governing sedimentation behavior are:</p>
+
+<h4>1. Sedimentation Velocity (v):</h4>
+<p>Described by <strong>Stokes' Law</strong>:</p>
+<div class="eq-block">v = 2r&sup2;(&rho; &minus; &rho;<sub>0</sub>)g / (9&eta;)</div>
+<p>Where: r = particle radius, &rho; = particle density, &rho;<sub>0</sub> = medium density, g = acceleration due to gravity, &eta; = viscosity of medium.</p>
+<ul>
+<li>Smaller particles settle slower (v &prop; r&sup2;).</li>
+<li>Higher viscosity of medium reduces settling.</li>
+<li>Density difference (&rho; &minus; &rho;<sub>0</sub>) should be minimized (approach &rho; &asymp; &rho;<sub>0</sub>).</li>
+</ul>
+
+<h4>2. Sedimentation Volume (V<sub>s</sub> or F):</h4>
+<div class="eq-block">F = V<sub>u</sub> / V<sub>0</sub></div>
+<p>Where V<sub>u</sub> = ultimate (final) volume of sediment, V<sub>0</sub> = initial total volume of suspension.</p>
+<ul>
+<li>F = 1.0: No sedimentation (ideal but rare).</li>
+<li>F = 0.5: Sediment occupies half the original volume.</li>
+<li><strong>Higher F value is desirable</strong> &ndash; indicates loose, flocculated sediment that is easy to redisperse.</li>
+</ul>
+
+<h4>3. Degree of Flocculation (&beta;):</h4>
+<div class="eq-block">&beta; = F / F<sub>&infin;</sub> = V<sub>u</sub> / V<sub>&infin;</sub></div>
+<p>Where F = sedimentation volume of flocculated suspension, F<sub>&infin;</sub> = sedimentation volume of deflocculated suspension (ultimate settled volume when all particles are packed without flocculation).</p>
+<ul>
+<li>&beta; = 1: Deflocculated (no flocculation).</li>
+<li>&beta; &gt; 1: Flocculated (loose structure, larger sediment volume).</li>
+<li><strong>Pharmaceutical target: &beta; &gt; 1</strong> (controlled flocculation).</li>
+</ul>
+
+<h4>4. Sedimentation Rate:</h4>
+<ul>
+<li>Rate of height decrease of the clear supernatant-suspension interface with time.</li>
+<li>For a flocculated suspension, the entire floc network settles as a single entity (zone settling) with a sharp interface.</li>
+</ul>
+
+<h4>5. Redispersibility:</h4>
+<ul>
+<li>Ease with which the sediment can be resuspended by gentle shaking.</li>
+<li>Flocculated sediments are easily redispersible; deflocculated sediments form hard cakes.</li>
+</ul>
+
+<h4>6. Suspension Uniformity:</h4>
+<ul>
+<li>Measured by assaying drug content at different depths after defined storage periods.</li>
+<li>A good suspension should have uniform drug distribution after redispersion.</li>
+</ul>
+
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> Always write Stokes' equation first, then explain each parameter. F (sedimentation volume) and &beta; (degree of flocculation) are the most frequently asked. Remember: &beta; &gt; 1 = flocculated = desirable.
+</div>
+
+<div class="sub-label">(b) Physical Instability Markers of Emulsion &ndash; Explain Any Two [05 Marks]</div>
+
+<h4>Physical Instability Markers of Emulsion:</h4>
+<ol>
+<li><strong>Cracking (Coalescence):</strong> Complete and irreversible separation of the dispersed phase as a distinct layer. The emulsifying film is completely destroyed.</li>
+<li><strong>Coalescence:</strong> Two or more droplets merge to form a larger droplet. If unchecked, leads to cracking. It indicates weakness in the interfacial film.</li>
+<li><strong>Flocculation:</strong> Droplets aggregate (come together) without rupture of the interfacial film. The emulsion type is not changed; it is reversible by shaking.</li>
+<li><strong>Creaming:</strong> Separation of the dispersed phase as a concentrated layer (cream) at the top or bottom, depending on density differences. The emulsion type is NOT changed &ndash; gentle shaking can redistribute.
+  <ul>
+  <li><strong>Upward creaming:</strong> Dispersed phase is lighter than continuous (O/W emulsions where oil &lt; water density).</li>
+  <li><strong>Downward creaming (sedimentation):</strong> Dispersed phase is denser (W/O emulsions).</li>
+  </ul>
+</li>
+<li><strong>Phase Inversion:</strong> The type of emulsion changes from O/W to W/O or vice versa. Caused by change in phase volume ratio, addition of wrong-type emulsifier, temperature change (PIT).</li>
+<li><strong>Ostwald Ripening:</strong> Growth of larger droplets at the expense of smaller ones due to solubility differences (Laplace pressure). Smaller droplets have higher solubility &rarr; drug diffuses to larger droplets.</li>
+<li><strong>Breaking:</strong> Synonymous with cracking; complete failure of emulsion.</li>
+</ol>
+
+<h4>Explanation of Two Markers:</h4>
+
+<p><strong>1. Creaming:</strong></p>
+<ul>
+<li><strong>Mechanism:</strong> Based on <strong>Stokes' law</strong>. Droplets of the dispersed phase move upward or downward due to density difference. The rate depends on droplet size, density difference, and continuous phase viscosity.</li>
+<li><strong>Velocity:</strong> v = 2r&sup2;(&rho;<sub>d</sub> &minus; &rho;<sub>c</sub>)g / (9&eta;)</li>
+<li><strong>Control:</strong> Reduce droplet size, increase continuous phase viscosity (thickening agents), minimize density difference, use flocculating agents.</li>
+<li><strong>Significance:</strong> Creaming is NOT a complete failure &ndash; it indicates the emulsifying film is intact. The emulsion can be redispersed by shaking.</li>
+</ul>
+
+<p><strong>2. Coalescence:</strong></p>
+<ul>
+<li><strong>Mechanism:</strong> When two droplets approach each other, the interfacial film between them thins and eventually ruptures, allowing the internal phases to merge. This is an <strong>irreversible</strong> process.</li>
+<li><strong>Causes:</strong> Insufficient emulsifier concentration, weak interfacial film, incompatible emulsifiers, presence of electrolytes that reduce zeta potential, temperature effects.</li>
+<li><strong>Control:</strong> Use adequate emulsifier concentration, form mixed interfacial films (e.g., sodium cetyl sulfate + cholesterol), maintain zeta potential (&gt; &plusmn;30 mV), add viscosity enhancers.</li>
+<li><strong>Significance:</strong> Coalescence leads to progressive increase in droplet size and eventually cracking (complete separation). It is a more serious instability than creaming.</li>
+</ul>
+
+<div class="sub-label">(c) Various Mechanisms of Emulsifying Agents [05 Marks]</div>
+
+<p>Emulsifying agents stabilize emulsions through several mechanisms:</p>
+
+<ol>
+<li><strong>Reduction of Interfacial Tension:</strong>
+  <ul>
+  <li>Surfactant molecules adsorb at the oil-water interface, reducing the interfacial tension.</li>
+  <li>Lower interfacial tension &rarr; less energy needed to create droplets &rarr; easier formation and smaller droplets.</li>
+  <li>Example: Spans, Tweens reduce oil-water interfacial tension from ~50 mN/m to ~5&ndash;15 mN/m.</li>
+  </ul>
+</li>
+<li><strong>Formation of Monomolecular Film (Interfacial Film):</strong>
+  <ul>
+  <li>Surfactant molecules orient at the interface forming a coherent, mechanically strong film around each droplet.</li>
+  <li>This film prevents droplets from coming into direct contact and coalescing.</li>
+  <li><strong>Mixed films</strong> (e.g., ionic surfactant + long-chain alcohol) are stronger than single-component films.</li>
+  </ul>
+</li>
+<li><strong>Formation of Multimolecular Film:</strong>
+  <ul>
+  <li>Hydrophilic colloids (acacia, gelatin, tragacanth) form a thick, viscous, multimolecular layer at the interface.</li>
+  <li>This layer acts as a physical barrier against coalescence.</li>
+  <li>Also increases the viscosity of the continuous phase, reducing droplet movement.</li>
+  </ul>
+</li>
+<li><strong>Formation of Solid Particle Film (Pickering Emulsion):</strong>
+  <ul>
+  <li>Finely divided solid particles (bentonite, veegum, titanium dioxide) adsorb at the oil-water interface.</li>
+  <li>Particles pack around droplets forming a rigid mechanical barrier.</li>
+  <li>Very stable emulsions; the particle must be partially wetted by both phases.</li>
+  </ul>
+</li>
+<li><strong>Electrical Double Layer Formation:</strong>
+  <ul>
+  <li>Ionic emulsifiers impart a charge to droplet surfaces.</li>
+  <li>An electrical double layer develops, causing electrostatic repulsion between approaching droplets.</li>
+  <li>Prevents coalescence by keeping droplets apart.</li>
+  <li>Example: Sodium lauryl sulfate gives negative charge to O/W droplets.</li>
+  </ul>
+</li>
+<li><strong>Viscosity Enhancement:</strong>
+  <ul>
+  <li>Emulsifying agents like gums, cellulose derivatives, and clays increase the viscosity of the continuous phase.</li>
+  <li>Higher viscosity reduces the rate of creaming, coalescence, and Brownian collision.</li>
+  </ul>
+</li>
+</ol>
+
+<div class="revision-note">
+<strong>&#128218; Short Revision Note:</strong> Six mechanisms: (1) Reduce &gamma; (2) Monomolecular film (3) Multimolecular film (4) Solid particle film (Pickering) (5) Electrical double layer (6) Viscosity. First three are most important for exams.
+</div>
+
+</div></div>
+</div>
+
+<!-- Q4 -->
+<div class="q-card" id="q4" data-search="accelerated stability half life zero order first order chemical degradation factors">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.4</span>
+<span class="q-title">Accelerated Stability | Half Life Derivation | Chemical Degradation Factors</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q4">
+
+<div class="sub-label">(a) Accelerated Stability Testing in Expiration Dating [06 Marks]</div>
+
+<p><strong>Definition:</strong> Accelerated stability testing involves storing the pharmaceutical product under <strong>elevated stress conditions</strong> (higher temperature, humidity, light intensity) to <strong>accelerate degradation</strong> and predict the shelf life under normal storage conditions, based on the <strong>Arrhenius equation</strong>.</p>
+
+<h4>Principle &ndash; Arrhenius Equation:</h4>
+<div class="eq-block">k = A &times; e<sup>&minus;E<sub>a</sub>/RT</sup></div>
+<p>In linearized form:</p>
+<div class="eq-block"><strong>log k = log A &minus; E<sub>a</sub> / (2.303RT)</strong></div>
+
+<p>Where: k = rate constant, A = frequency factor, E<sub>a</sub> = activation energy, R = 8.314 J/mol&middot;K, T = absolute temperature (K).</p>
+
+<h4>Procedure:</h4>
+<ol>
+<li><strong>Sample Preparation:</strong> Multiple samples in final packaging containers.</li>
+<li><strong>Elevated Temperature Storage:</strong> Store at multiple temperatures (e.g., 40&deg;C, 50&deg;C, 60&deg;C, 70&deg;C) with controlled humidity.</li>
+<li><strong>Periodic Sampling:</strong> Withdraw samples at regular intervals (e.g., 0, 1, 2, 4 weeks).</li>
+<li><strong>Assay:</strong> Determine remaining drug concentration at each time point.</li>
+<li><strong>Calculate k at each temperature:</strong> Using appropriate kinetic model (usually first order).</li>
+<li><strong>Arrhenius Plot:</strong> Plot log k vs 1/T (K<sup>&minus;1</sup>). This gives a straight line.</li>
+<li><strong>Extrapolation:</strong> Extrapolate the line to 25&deg;C (1/298 = 0.003354 K<sup>&minus;1</sup>) to obtain k<sub>25</sub>.</li>
+<li><strong>Shelf Life Calculation:</strong> t<sub>90</sub> = 0.1054 / k<sub>25</sub> (for first order).</li>
+</ol>
+
+<div class="ascii-diagram">
+  log k
+     │  40&deg;C
+     │    &#8226;
+     │       &#8226;  50&deg;C
+     │          &#8226;
+     │             &#8226;  60&deg;C
+     │                &#8226;
+     │                   &#8226;  70&deg;C
+     │                      ╲
+     │                       ╲  Extrapolation
+     │                        ╲
+     │                         ╲
+     │                          &#8226; 25&deg;C (predicted k<sub>25</sub>)
+     └──────────────────────────── 1/T (K&#8315;&#185;)
+     
+  Slope = &minus;E<sub>a</sub> / (2.303R)
+</div>
+
+<h4>ICH Storage Conditions:</h4>
+<table>
+<tr><th>Study</th><th>Temperature</th><th>Humidity</th><th>Min. Duration</th></tr>
+<tr><td>Long term</td><td>25&deg;C &plusmn; 2&deg;C</td><td>60% RH &plusmn; 5%</td><td>12 months</td></tr>
+<tr><td>Intermediate</td><td>30&deg;C &plusmn; 2&deg;C</td><td>65% RH &plusmn; 5%</td><td>6 months</td></tr>
+<tr><td>Accelerated</td><td>40&deg;C &plusmn; 2&deg;C</td><td>75% RH &plusmn; 5%</td><td>6 months</td></tr>
+</table>
+
+<h4>Objectives:</h4>
+<ul>
+<li>Predict shelf life (expiration date) without waiting for real-time data</li>
+<li>Identify degradation pathways and products</li>
+<li>Evaluate effect of packaging on stability</li>
+<li>Provide regulatory submission data</li>
+<li>Establish recommended storage conditions and labeling</li>
+</ul>
+
+<div class="highlight-box">
+<strong>Limitations:</strong> Arrhenius equation is valid only when the <strong>degradation mechanism remains unchanged</strong> at all temperatures. Products undergoing phase transitions, change in degradation pathway, or moisture-dependent degradation at elevated T may not follow Arrhenius behavior.
+</div>
+
+<div class="sub-label">(b) Derivation of Half Life for Zero Order and First Order Kinetics [05 Marks]</div>
+
+<h4>Zero Order Half Life:</h4>
+<p><strong>Rate law:</strong></p>
+<div class="eq-block">&minus;d[A]/dt = k<sub>0</sub></div>
+
+<p><strong>Integrated equation:</strong></p>
+<div class="eq-block">[A] = [A]<sub>0</sub> &minus; k<sub>0</sub>t</div>
+
+<p><strong>Half Life Derivation:</strong></p>
+<p>At t = t<sub>1/2</sub>, [A] = [A]<sub>0</sub>/2</p>
+<div class="eq-block">[A]<sub>0</sub>/2 = [A]<sub>0</sub> &minus; k<sub>0</sub> &times; t<sub>1/2</sub></div>
+<div class="eq-block">k<sub>0</sub> &times; t<sub>1/2</sub> = [A]<sub>0</sub> &minus; [A]<sub>0</sub>/2 = [A]<sub>0</sub>/2</div>
+<div class="eq-block"><strong>t<sub>1/2</sub> = [A]<sub>0</sub> / (2k<sub>0</sub>)</strong></div>
+
+<div class="highlight-box">
+<strong>Zero Order:</strong> t<sub>1/2</sub> is <strong>directly proportional to initial concentration</strong>. As the reaction proceeds and concentration decreases, half life decreases.
+</div>
+
+<h4>First Order Half Life:</h4>
+<p><strong>Rate law:</strong></p>
+<div class="eq-block">&minus;d[A]/dt = k<sub>1</sub>[A]</div>
+
+<p><strong>Integrated equation:</strong></p>
+<div class="eq-block">ln[A]<sub>0</sub> &minus; ln[A] = k<sub>1</sub>t &nbsp;&nbsp;or&nbsp;&nbsp; ln([A]<sub>0</sub>/[A]) = k<sub>1</sub>t</div>
+
+<p><strong>Half Life Derivation:</strong></p>
+<p>At t = t<sub>1/2</sub>, [A] = [A]<sub>0</sub>/2</p>
+<div class="eq-block">ln([A]<sub>0</sub> / ([A]<sub>0</sub>/2)) = k<sub>1</sub> &times; t<sub>1/2</sub></div>
+<div class="eq-block">ln(2) = k<sub>1</sub> &times; t<sub>1/2</sub></div>
+<div class="eq-block"><strong>t<sub>1/2</sub> = 0.693 / k<sub>1</sub></strong></div>
+
+<div class="highlight-box">
+<strong>First Order:</strong> t<sub>1/2</sub> is <strong>independent of initial concentration</strong>. This is the hallmark of first order kinetics. It remains constant throughout the reaction.
+</div>
+
+<div class="revision-note">
+<strong>&#128218; Short Revision Note:</strong> Zero order: t<sub>1/2</sub> = [A]<sub>0</sub>/2k<sub>0</sub> (depends on [A]<sub>0</sub>). First order: t<sub>1/2</sub> = 0.693/k<sub>1</sub> (independent of [A]<sub>0</sub>). These derivations are very frequently asked &ndash; practice writing them step by step.
+</div>
+
+<div class="sub-label">(c) Chemical Factors Influencing Chemical Degradation [05 Marks]</div>
+
+<h4>Chemical Factors Affecting Pharmaceutical Degradation:</h4>
+
+<p><strong>1. pH:</strong></p>
+<ul>
+<li>One of the most critical factors. Rate of hydrolysis and many other reactions is pH-dependent.</li>
+<li>Specific acid catalysis: rate &uarr; with [H<sup>+</sup>]; specific base catalysis: rate &uarr; with [OH<sup>&minus;]</sup>.</li>
+<li>Maximum stability at an optimum pH (pH<sub>max</sub>) where the sum of H<sup>+</sup> and OH<sup>&minus; catalyzed rates is minimum.</li>
+<li><strong>Buffer species:</strong> Can catalyze degradation (general acid-base catalysis). E.g., phosphate buffer catalyzes penicillin degradation.</li>
+</ul>
+
+<p><strong>2. Solvent:</strong></p>
+<ul>
+<li>Polarity and dielectric constant of the solvent affect reaction rates.</li>
+<li>Reactions between ions of same charge: faster in solvents of lower dielectric constant.</li>
+<li>Reactions between ions of opposite charge: faster in solvents of higher dielectric constant.</li>
+<li>Co-solvents (e.g., propylene glycol, PEG) can increase or decrease stability depending on the reaction type.</li>
+</ul>
+
+<p><strong>3. Ionic Strength:</strong></p>
+<ul>
+<li>Affects reactions between ions (primary salt effect).</li>
+<li>Described by the <strong>Br&oslash;nsted-Bjerrum equation</strong>: log k = log k<sub>0</sub> + 1.02 Z<sub>A</sub>Z<sub>B</sub>&radic;&mu;</li>
+<li>Where Z<sub>A</sub>, Z<sub>B</sub> = charges on reacting ions, &mu; = ionic strength.</li>
+<li>Same charge ions: rate increases with ionic strength. Opposite charge: rate decreases.</li>
+</ul>
+
+<p><strong>4. Concentration of Drug:</strong></p>
+<ul>
+<li>For zero order: degradation rate is independent of concentration.</li>
+<li>For first order: absolute degradation rate depends on concentration, but fraction degraded is independent.</li>
+<li>In suspension (excess solid drug): degradation follows zero order (constant [A] in solution due to dissolution equilibrium).</li>
+</ul>
+
+<p><strong>5. Presence of Catalysts:</strong></p>
+<ul>
+<li>Trace metal ions (Cu<sup>2+</sup>, Fe<sup>3+</sup>) catalyze oxidative degradation.</li>
+<li>Enzymes (in biological formulations) catalyze hydrolysis.</li>
+<li>Light can act as a catalyst for photochemical degradation.</li>
+</ul>
+
+<p><strong>6. Chemical Incompatibility:</strong></p>
+<ul>
+<li>Reaction between drug and excipient (e.g., amines with reducing sugars &ndash; Maillard reaction).</li>
+<li>Drug-drug interaction in combination products.</li>
+<li>Incompatibility with container material (leaching of alkali from glass).</li>
+</ul>
+
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> pH is the #1 factor for hydrolytic degradation. Always mention: (1) pH profile with pH<sub>max</sub>, (2) buffer catalysis, (3) ionic strength effect with Br&oslash;nsted equation. Give specific drug examples if possible (penicillin + phosphate buffer).
+</div>
+
+</div></div>
+</div>
+
+<!-- Q5 -->
+<div class="q-card" id="q5" data-search="plastic pseudoplastic flow kinematic viscosity fluidity rheopexy cup bob viscometer">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.5</span>
+<span class="q-title">Plastic &amp; Pseudoplastic Flow | Viscosity Definitions | Cup &amp; Bob Viscometer</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q5">
+
+<div class="sub-label">(a) Plastic and Pseudoplastic Flow Curves with Examples [06 Marks]</div>
+
+<h4>1. Plastic Flow (Bingham Body):</h4>
+
+<p><strong>Definition:</strong> Plastic flow is a type of non-Newtonian flow in which the material does NOT flow until a <strong>minimum shear stress (yield value, &tau;<sub>y</sub>)</strong> is exceeded. Once the yield value is exceeded, the flow is linear (similar to Newtonian).</p>
+
+<p><strong>Equation (Bingham Equation):</strong></p>
+<div class="eq-block">&tau; = &tau;<sub>y</sub> + &eta;<sub>pl</sub> &times; &gamma;&#775;</div>
+<p>Where: &tau;<sub>y</sub> = yield value, &eta;<sub>pl</sub> = plastic viscosity.</p>
+
+<div class="ascii-diagram">
+  Shear Stress (&tau;)
+       │
+       │          _______________  &larr; Bingham flow line
+       │         /
+       │        /
+       │       /
+       │      /
+       │     /
+       │    /
+       │   │
+       │   │&tau;<sub>y</sub> (Yield Value)
+       │   │
+       └───┴──────────────────── Shear Rate (&gamma;&#775;)
+       0
+</div>
+
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Flow curve does NOT pass through origin &ndash; intercept on &tau; axis = yield value.</li>
+<li>Below yield value: material behaves as an elastic solid.</li>
+<li>Above yield value: linear relationship between &tau; and &gamma;&#775;.</li>
+<li>Apparent viscosity decreases with increasing shear rate (shear thinning after yield).</li>
+</ul>
+
+<p><strong>Examples:</strong> Toothpaste, ointments, ZnO suspension, butter, certain pharmaceutical pastes.</p>
+<p><strong>Pharmaceutical Significance:</strong> Yield value prevents settling of particles in suspension and dripping of ointments from the tube. The product stays in place until stress is applied (squeezing).</p>
+
+<h4>2. Pseudoplastic Flow (Shear Thinning):</h4>
+
+<p><strong>Definition:</strong> Pseudoplastic flow is a type of non-Newtonian flow in which the <strong>apparent viscosity decreases with increasing shear rate</strong>. No yield value exists &ndash; the flow curve passes through the origin but is concave toward the shear stress axis.</p>
+
+<p><strong>Equation (Power Law / Ostwald-de Waele Equation):</strong></p>
+<div class="eq-block">&tau; = K &times; &gamma;&#775;<sup>n</sup></div>
+<p>Where: K = consistency index (viscosity-like parameter), n = flow behavior index. For pseudoplastic: <strong>0 &lt; n &lt; 1</strong>. When n = 1, it becomes Newtonian.</p>
+
+<div class="ascii-diagram">
+  Shear Stress (&tau;)
+       │
+       │        ╱  
+       │      ╱     &larr; Pseudoplastic curve
+       │    ╱       (concave to &gamma;&#775; axis)
+       │  ╱
+       │╱
+       └──────────────────── Shear Rate (&gamma;&#775;)
+       0
+
+  Note: Curve passes through origin (no yield value)
+  Slope (&tau;/&gamma;&#775;) decreases &rarr; viscosity decreases with shear rate
+</div>
+
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>No yield value &ndash; starts flowing immediately upon application of any shear.</li>
+<li>Apparent viscosity = &tau;/&gamma;&#775; = K&gamma;&#775;<sup>(n&minus;1)</sup> &ndash; since n &lt; 1, this decreases as &gamma;&#795; increases.</li>
+<li>The shear thinning is <strong>reversible</strong> &ndash; when shear is removed, viscosity recovers.</li>
+</ul>
+
+<p><strong>Mechanism:</strong> Long-chain polymer molecules or asymmetric particles are randomly oriented at rest, creating high viscosity. Under shear, they align in the direction of flow, reducing internal friction and hence viscosity.</p>
+
+<p><strong>Examples:</strong> Polymer solutions (MC, HPMC, CMC, PVP), natural gum solutions (acacia, tragacanth), blood, many liquid pharmaceutical formulations (syrups, suspensions with polymers).</p>
+
+<p><strong>Pharmaceutical Significance:</strong> Pseudoplastic behavior is desirable in topical products &ndash; high viscosity at rest (stays on skin), low viscosity during rubbing (easy to spread). Also beneficial in suspensions for pourability.</p>
+
+<div class="highlight-box">
+<strong>Key Difference:</strong> Plastic = has yield value (&tau;<sub>y</sub>), linear after yield. Pseudoplastic = no yield value, curve through origin, concave to &gamma;&#795; axis. Both show decreased viscosity with increased shear rate.
+</div>
+
+<div class="sub-label">(b) Definitions: Kinematic Viscosity, Fluidity, Bulges, Rheopexy, Poise [05 Marks]</div>
+
+<p><strong>1. Kinematic Viscosity (&nu;):</strong></p>
+<ul>
+<li>The ratio of dynamic viscosity (&eta;) to the density (&rho;) of the fluid.</li>
+</ul>
+<div class="eq-block">&nu; = &eta; / &rho;</div>
+<ul>
+<li><strong>Unit:</strong> Stokes (St) or centistokes (cSt). 1 cSt = 10<sup>&minus;6</sup> m&sup2;/s.</li>
+<li>Used when gravitational forces (not applied forces) drive the flow (e.g., in capillary viscometers).</li>
+</ul>
+
+<p><strong>2. Fluidity (&phi;):</strong></p>
+<ul>
+<li>The reciprocal of dynamic viscosity.</li>
+</ul>
+<div class="eq-block">&phi; = 1 / &eta;</div>
+<ul>
+<li><strong>Unit:</strong> Rhe (1/Poise).</li>
+<li>Represents the ease with which a fluid flows. Higher fluidity = lower viscosity = easier flow.</li>
+</ul>
+
+<p><strong>3. Bulges:</strong></p>
+<ul>
+<li>In rheology, <strong>bulges</strong> refer to localized increases or irregularities observed in the flow curve (shear stress vs. shear rate plot) of certain complex systems.</li>
+<li>They indicate <strong>structural changes</strong> occurring at specific shear rates &ndash; e.g., breakdown of a particular structural arrangement leading to a temporary fluctuation.</li>
+<li>Observed in some thixotropic systems where the structural breakdown is not smooth.</li>
+</ul>
+
+<p><strong>4. Rheopexy (Antithixotropy):</strong></p>
+<ul>
+<li>A time-dependent <strong>shear thickening</strong> phenomenon. Under constant shear rate, the <strong>viscosity increases over time</strong>.</li>
+<li>The material builds structure during shearing rather than breaking down.</li>
+<li>When shear is stopped, the structure gradually relaxes.</li>
+<li><strong>Examples:</strong> Concentrated starch suspensions, certain PVC plastisols, colloidal iron oxide suspensions.</li>
+<li><strong>Hysteresis loop:</strong> Up-curve (increasing shear rate) is BELOW the down-curve (decreasing shear rate).</li>
+</ul>
+
+<p><strong>5. Poise (P):</strong></p>
+<ul>
+<li>The <strong>CGS unit of dynamic viscosity</strong>.</li>
+<li>1 Poise = 1 dyne&middot;second/cm&sup2; = 1 g/(cm&middot;s).</li>
+<li>Sub-unit: <strong>Centipoise (cP)</strong> = 0.01 P.</li>
+<li><strong>SI equivalent:</strong> 1 Pa&middot;s (Pascal-second) = 10 Poise = 1000 cP.</li>
+<li>Reference: Viscosity of water at 20&deg;C = 1.002 cP &asymp; 1 cP.</li>
+</ul>
+
+<div class="sub-label">(c) Cup and Bob Viscometer with Diagram [05 Marks]</div>
+
+<h4>Principle:</h4>
+<p>The cup and bob viscometer (Couette viscometer) works on the principle of <strong>rotational viscometry</strong>. A cylindrical bob (inner cylinder) is suspended concentrically inside a cup (outer cylinder) containing the test fluid. Either the cup rotates and the bob is stationary, or vice versa. The viscous drag of the fluid transmits torque, which is measured. The shear stress and shear rate are calculated from the geometry, and viscosity is determined.</p>
+
+<div class="ascii-diagram">
+              ┌─────────────────┐
+              │   Torque        │
+              │   Measuring     │
+              │   Device        │
+              ├────────┬────────┤
+                      │
+                      │ Shaft
+                      │
+              ┌───────┴───────┐
+              │               │
+              │     BOB       │  (Inner cylinder, radius r<sub>b</sub>)
+              │    (Rotor)    │
+              │               │
+              └───────────────┘
+                      
+         ══════════════════════════  &larr; Gap (containing test fluid)
+         ║                       ║
+         ║         CUP           ║  (Outer cylinder, radius r<sub>c</sub>)
+         ║      (Stationary      ║
+         ║       or rotating)    ║
+         ║                       ║
+         ══════════════════════════
+              
+         Motor rotates the cup
+         Bob experiences torque due to fluid drag
+</div>
+
+<h4>Construction:</h4>
+<ul>
+<li><strong>Cup (Outer Cylinder):</strong> A precisely machined cylindrical vessel of radius r<sub>c</sub>. Can be rotated by a motor at defined speeds (RPM).</li>
+<li><strong>Bob (Inner Cylinder):</strong> A coaxial cylinder of radius r<sub>b</sub>, suspended by a wire or torsion spring. The gap between bob and cup contains the test fluid.</li>
+<li><strong>Torque Measurement:</strong> The deflection of the torsion wire/spring (or electronic load cell) measures the torque.</li>
+<li><strong>Temperature Control:</strong> Water jacket around the cup for temperature regulation.</li>
+</ul>
+
+<h4>Working:</h4>
+<ol>
+<li>The gap between cup and bob is filled with the test fluid.</li>
+<li>The cup is rotated at a defined angular velocity (&omega;).</li>
+<li>The rotating fluid drags the bob, creating a torque proportional to the fluid viscosity.</li>
+<li>The torque (&tau;) is measured from the angular deflection of the spring/wire.</li>
+</ol>
+
+<h4>Equations:</h4>
+<p><strong>Shear stress at bob surface:</strong></p>
+<div class="eq-block">&tau; = T / (2&pi;r<sub>b</sub><sup>2</sup>h)</div>
+
+<p><strong>Shear rate:</strong></p>
+<div class="eq-block">&gamma;&#795; = 2&omega;r<sub>c</sub><sup>2</sup> / (r<sub>c</sub><sup>2</sup> &minus; r<sub>b</sub><sup>2</sup>)</div>
+
+<p>Where: T = measured torque, h = effective height of bob, &omega; = angular velocity (rad/s).</p>
+
+<p><strong>Viscosity:</strong></p>
+<div class="eq-block">&eta; = &tau; / &gamma;&#795;</div>
+
+<h5>Advantages:</h5>
+<ul>
+<li>Defined shear rate at the bob surface (suitable for non-Newtonian fluids)</li>
+<li>Good temperature control</li>
+<li>Can study thixotropic behavior (hysteresis loops)</li>
+<li>Suitable for viscous and semi-solid materials</li>
+</ul>
+<h5>Limitations:</h5>
+<ul>
+<li>Shear rate is not perfectly uniform across the gap (unlike cone-and-plate)</li>
+<li>Larger sample volume required than cone-and-plate</li>
+<li>End effects at top and bottom of bob must be corrected</li>
+</ul>
+
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> Draw the cup-bob diagram clearly showing the gap, inner bob, outer cup, shaft, and torque device. Mention that shear rate is NOT uniform (unlike cone-and-plate) &ndash; this is the key disadvantage.
+</div>
+
+</div></div>
+</div>
+
+<!-- Q6 -->
+<div class="q-card" id="q6" data-search="porosity packing powder micromeritics types emulsion thixotropy antithixotropy">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.6</span>
+<span class="q-title">Porosity &amp; Packing | Types of Emulsion | Thixotropy &amp; Antithixotropy</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q6">
+
+<div class="sub-label">(a) Porosity and Packing Arrangement of Powder &ndash; Applications of Micromeritics [06 Marks]</div>
+
+<h4>Porosity:</h4>
+<p><strong>Definition:</strong> Porosity (&epsilon;) is the <strong>fraction of the total volume of a powder bed that is occupied by voids (air spaces)</strong> between particles.</p>
+<div class="eq-block">&epsilon; = V<sub>voids</sub> / V<sub>bulk</sub> = (V<sub>bulk</sub> &minus; V<sub>true</sub>) / V<sub>bulk</sub> = 1 &minus; (V<sub>true</sub> / V<sub>bulk</sub>) = 1 &minus; (&rho;<sub>bulk</sub> / &rho;<sub>true</sub>)</div>
+
+<p>Where: V<sub>bulk</sub> = bulk volume, V<sub>true</sub> = true volume of solid material, &rho;<sub>bulk</sub> = bulk density, &rho;<sub>true</sub> = true density.</p>
+
+<h4>Packing Arrangements:</h4>
+<p>The porosity of a powder bed depends on the arrangement of particles. Two idealized arrangements exist for uniform spheres:</p>
+
+<p><strong>1. Closest (Hexagonal) Packing:</strong></p>
+<ul>
+<li>Maximum packing density, minimum porosity.</li>
+<li>Each sphere touches 12 neighbors (coordination number = 12).</li>
+<li>Porosity = <strong>25.95%</strong> (theoretical minimum for uniform spheres).</li>
+<li>Volume fraction of solids = 0.7405.</li>
+</ul>
+
+<p><strong>2. Loosest (Cubic) Packing:</strong></p>
+<ul>
+<li>Minimum packing density, maximum porosity.</li>
+<li>Each sphere touches 6 neighbors (coordination number = 6).</li>
+<li>Porosity = <strong>47.64%</strong> (theoretical maximum for uniform spheres).</li>
+<li>Volume fraction of solids = 0.5236.</li>
+</ul>
+
+<div class="ascii-diagram">
+  Loosest Packing (Cubic):       Closest Packing (Hexagonal):
+  Coordination No. = 6           Coordination No. = 12
+  
+    &#9679;   &#9679;   &#9679;              &#9679; &#9679; &#9679;
+                                       &#9679; &#9679; &#9679;
+    &#9679;   &#9679;   &#9679;          &#9679; &#9679; &#9679;
+                                       &#9679; &#9679; &#9679;
+    &#9679;   &#9679;   &#9679;
+  
+  &epsilon; = 47.64%               &epsilon; = 25.95%
+  
+  Real powders: &epsilon; = 30&ndash;50%
+</div>
+
+<h5>Factors Affecting Porosity:</h5>
+<ul>
+<li><strong>Particle size distribution:</strong> Bimodal distribution &rarr; fine particles fill voids between coarse &rarr; lower porosity.</li>
+<li><strong>Particle shape:</strong> Irregular/angular particles &rarr; higher porosity (more void space due to interlocking).</li>
+<li><strong>Method of compaction:</strong> Tapping, vibration, compression &rarr; reduce porosity.</li>
+<li><strong>Surface texture:</strong> Rough surfaces &rarr; more interparticle friction &rarr; higher porosity.</li>
+<li><strong>Interparticulate forces:</strong> Strong cohesive forces (fine particles) &rarr; bridging &rarr; higher porosity.</li>
+</ul>
+
+<h4>Applications of Micromeritics in Pharmacy:</h4>
+<ol>
+<li><strong>Tablet Manufacturing:</strong> Porosity affects compression behavior, tablet hardness, and disintegration. Optimal porosity ensures good mechanical strength with acceptable disintegration time.</li>
+<li><strong>Capsule Filling:</strong> Bulk density and porosity determine the fill weight and flow behavior.</li>
+<li><strong>Suspension Formulation:</strong> Porosity affects sedimentation behavior. Controlled porosity (through flocculation) ensures easy redispersibility.</li>
+<li><strong>Drug Release from Matrix Systems:</strong> Porosity of matrix tablets controls the diffusion path for drug release (Higuchi model depends on porosity).</li>
+<li><strong>Flow Properties:</strong> Carr's index and Hausner ratio (derived from bulk and tapped densities, hence porosity) predict powder flow.</li>
+<li><strong>Dissolution Rate:</strong> Higher porosity &rarr; greater surface area exposed to dissolution medium &rarr; faster dissolution.</li>
+<li><strong>Filter Design:</strong> Porosity of filter beds determines filtration rate and efficiency.</li>
+</ol>
+
+<div class="sub-label">(b) Different Types of Emulsion [05 Marks]</div>
+
+<h4>Classification of Emulsions:</h4>
+
+<p><strong>A. Based on Dispersed Phase:</strong></p>
+<ol>
+<li><strong>Oil-in-Water (O/W) Emulsion:</strong>
+  <ul>
+  <li>Oil is the dispersed phase, water is the continuous phase.</li>
+  <li>Dilutable with water (not with oil).</li>
+  <li>Conducts electricity (water is continuous).</li>
+  <li>Water-soluble dyes diffuse throughout.</li>
+  <li>Examples: Milk, vanishing cream, most oral and parenteral emulsions.</li>
+  </ul>
+</li>
+<li><strong>Water-in-Oil (W/O) Emulsion:</strong>
+  <ul>
+  <li>Water is the dispersed phase, oil is the continuous phase.</li>
+  <li>Dilutable with oil (not with water).</li>
+  <li>Does not conduct electricity.</li>
+  <li>Oil-soluble dyes diffuse throughout.</li>
+  <li>Examples: Cold cream, butter, cod liver oil emulsion.</li>
+  </ul>
+</li>
+</ol>
+
+<p><strong>B. Based on Droplet Size:</strong></p>
+<ol start="3">
+<li><strong>Macroemulsions:</strong> Droplet size 0.1&ndash;100 &mu;m; opaque/turbid; thermodynamically unstable; visible under optical microscope.</li>
+<li><strong>Microemulsions:</strong> Droplet size 10&ndash;100 nm; transparent/clear; thermodynamically stable; form spontaneously with high surfactant concentration.</li>
+<li><strong>Nanoemulsions:</strong> Droplet size 50&ndash;200 nm; translucent to transparent; kinetically stable (not thermodynamically); require high energy input for preparation.</li>
+</ol>
+
+<p><strong>C. Based on Number of Phases:</strong></p>
+<ol start="6">
+<li><strong>Simple Emulsion:</strong> Two phases only (O/W or W/O).</li>
+<li><strong>Multiple Emulsion:</strong>
+  <ul>
+  <li><strong>W/O/W:</strong> Water-in-oil emulsion dispersed in an aqueous phase (water droplets within oil droplets within water).</li>
+  <li><strong>O/W/O:</strong> Oil-in-water emulsion dispersed in an oily phase.</li>
+  </ul>
+  Used for sustained/controlled drug release, drug targeting, taste masking.
+</li>
+</ol>
+
+<p><strong>D. Based on Nature of Emulsifier:</strong></p>
+<ol start="8">
+<li><strong>Anionic surfactant emulsions</strong> (e.g., soap, SLS)</li>
+<li><strong>Cationic surfactant emulsions</strong> (e.g., cetyltrimethylammonium bromide)</li>
+<li><strong>Non-ionic surfactant emulsions</strong> (e.g., Spans, Tweens)</li>
+<li><strong>Natural emulsifier emulsions</strong> (e.g., acacia, gelatin)</li>
+<li><strong>Solid particle emulsions (Pickering)</strong> (e.g., bentonite)</li>
+</ol>
+
+<div class="sub-label">(c) Thixotropy &ndash; Definition, Comment on Thixotropy and Antithixotropy [05 Marks]</div>
+
+<h4>Definition of Thixotropy:</h4>
+<p><strong>Thixotropy</strong> is a <strong>time-dependent, reversible shear thinning</strong> property of certain non-Newtonian systems. When subjected to shear, the viscosity decreases progressively over time due to gradual breakdown of the internal structural network. When shear is removed, the viscosity gradually recovers over time as the structure rebuilds.</p>
+
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Isotropic at rest (gel-like structure)</li>
+<li>Becomes fluid under shear (sol-like state)</li>
+<li>Recovery is time-dependent (not instantaneous)</li>
+<li>The process is fully reversible</li>
+</ul>
+
+<p><strong>Examples:</strong> Bentonite magma, colloidal iron oxide, carbopol gels, certain paints, ketchup, some pharmaceutical gels and suspensions.</p>
+
+<h4>Thixotropy vs Antithixotropy:</h4>
+
+<table>
+<tr><th>Parameter</th><th>Thixotropy</th><th>Antithixotropy (Rheopexy)</th></tr>
+<tr><td><strong>Definition</strong></td><td>Time-dependent shear thinning</td><td>Time-dependent shear thickening</td></tr>
+<tr><td><strong>Viscosity change with time (at constant shear)</strong></td><td>Decreases</td><td>Increases</td></tr>
+<tr><td><strong>Structure under shear</strong></td><td>Breaks down progressively</td><td>Builds up progressively</td></tr>
+<tr><td><strong>Hysteresis loop</strong></td><td>Up-curve is ABOVE down-curve</td><td>Up-curve is BELOW down-curve</td></tr>
+<tr><td><strong>Area of loop</strong></td><td>Represents degree of thixotropic breakdown</td><td>Represents degree of antithixotropic buildup</td></tr>
+<tr><td><strong>Recovery after shear</strong></td><td>Structure rebuilds (viscosity increases back)</td><td>Structure relaxes (viscosity decreases back)</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Very common in pharmaceuticals</td><td>Rare in pharmaceuticals</td></tr>
+<tr><td><strong>Examples</strong></td><td>Bentonite, carbopol gels, paints</td><td>Concentrated starch, PVC plastisols</td></tr>
+<tr><td><strong>Pharmaceutical desirability</strong></td><td>Desirable in many formulations (easy spreading, stays in place at rest)</td><td>Generally undesirable</td></tr>
+</table>
+
+<div class="ascii-diagram">
+  THIXOTROPIC LOOP:              ANTITHIXOTROPIC LOOP:
+  
+  &tau;                             &tau;
+  │    ╭─╮                        │  ╲
+  │   ╱   ╲  &darr; Up              │   ╲
+  │  ╱     ╲                      │    ╲
+  │ ╱       ╲  &uarr; Down          │     ╲
+  │╱         ╲                    │      ╲
+  └─────────── &gamma;&#795;            └─────── &gamma;&#795;
+  Up > Down                       Up < Down
+</div>
+
+<div class="highlight-box">
+<strong>Pharmaceutical Significance of Thixotropy:</strong> Thixotropic gels are excellent for topical application &ndash; high viscosity in the tube (stays in place), low viscosity during rubbing (easy to spread), and high viscosity again after application (stays on skin). Thixotropic suspensions resist settling at rest but pour easily when shaken.
+</div>
+
+</div></div>
+</div>
+
+<!-- Q7 -->
+<div class="q-card" id="q7" data-search="density powder suspension stability factors ostwald viscometer">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.7</span>
+<span class="q-title">OR Questions: Densities of Powder / Suspension Stability / Ostwald Viscometer</span>
+<span class="q-marks">06+05 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q7">
+
+<div class="or-badge">OPTION (a) &ndash; Densities of Powder</div>
+
+<h4>Different Types of Densities of Powder:</h4>
+
+<ol>
+<li><strong>True Density (&rho;<sub>true</sub>):</strong>
+  <ul>
+  <li>The mass of the powder divided by the <strong>true volume</strong> of solid material (excluding all pores and voids).</li>
+  <li>Measured by liquid displacement using a pycnometer with a liquid that does NOT penetrate pores (e.g., mercury for coarse powders) or by gas pycnometer (helium).</li>
+  </ul>
+</li>
+<li><strong>Granule Density (&rho;<sub>granule</sub>):</strong>
+  <ul>
+  <li>The mass divided by the volume of granules including <strong>intraparticle (intragranular) pores</strong> but excluding interparticle voids.</li>
+  <li>Also called particle density.</li>
+  </ul>
+</li>
+<li><strong>Bulk Density (&rho;<sub>bulk</sub>):</strong>
+  <ul>
+  <li>The mass of powder divided by the <strong>bulk volume</strong> (including both interparticle and intraparticle voids) without any tapping.</li>
+  </ul>
+</li>
+<li><strong>Tapped Density (&rho;<sub>tapped</sub>):</strong>
+  <ul>
+  <li>The mass divided by the bulk volume after a specified number of taps (usually 500&ndash;1250 taps) until minimum volume is reached.</li>
+  </ul>
+</li>
+</ol>
+
+<div class="ascii-diagram">
+  TRUE VOLUME      PARTICLE VOLUME     BULK VOLUME
+  
+  ┌──────┐        ┌──────┐          ┌──────┐
+  │██████│        │██████│          │██████│
+  │██████│        │████▒▒│ &larr; intra-  │▒▒▒▒▒▒│ &larr; inter-
+  │██████│        │████▒▒│   particle  │▒▒████│   particle
+  └──────┘        └──────┘   pores    │▒▒████│   voids
+   Solid only      Solid +             │▒▒▒▒▒▒│
+                   intraparticle       └──────┘
+                   pores only          All included
+</div>
+
+<p><strong>Relationship:</strong></p>
+<div class="eq-block">&rho;<sub>true</sub> &gt; &rho;<sub>granule</sub> &gt; &rho;<sub>tapped</sub> &gt; &rho;<sub>bulk</sub></div>
+
+<h4>Experimental Method for Determination of Bulk Density:</h4>
+
+<p><strong>Apparatus:</strong> Graduated cylinder (100 mL), balance, funnel.</p>
+
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Weigh a clean, dry graduated cylinder (W<sub>1</sub>).</li>
+<li>Pour a known mass (W) of powder through a funnel into the cylinder from a height of about 2&ndash;4 cm, to minimize packing.</li>
+<li>Read the untapped volume (V<sub>bulk</sub>) directly from the cylinder.</li>
+<li>Calculate bulk density:</li>
+</ol>
+<div class="eq-block">&rho;<sub>bulk</sub> = (W<sub>2</sub> &minus; W<sub>1</sub>) / V<sub>bulk</sub> = W / V<sub>bulk</sub> (g/mL)</div>
+
+<p><strong>For Tapped Density:</strong></p>
+<ol>
+<li>Tap the cylinder mechanically (using a tapped density tester) for 500 taps initially.</li>
+<li>Read the volume. Continue tapping in increments of 250 taps until the volume difference between two consecutive readings is less than 2%.</li>
+<li>Record the final tapped volume (V<sub>tapped</sub>).</li>
+</ol>
+<div class="eq-block">&rho;<sub>tapped</sub> = W / V<sub>tapped</sub> (g/mL)</div>
+
+<div class="highlight-box">
+<strong>From these densities:</strong> Carr's Index = [(&rho;<sub>tapped</sub> &minus; &rho;<sub>bulk</sub>) / &rho;<sub>tapped</sub>] &times; 100. Hausner Ratio = &rho;<sub>tapped</sub> / &rho;<sub>bulk</sub>. Porosity = 1 &minus; (&rho;<sub>bulk</sub> / &rho;<sub>true</sub>).
+</div>
+
+<hr style="margin:24px 0;border:none;border-top:2px dashed var(--border)">
+
+<div class="or-badge">OPTION (a) OR &ndash; Suspension Stability Factors</div>
+
+<h4>Definition of Suspension:</h4>
+<p>A <strong>suspension</strong> is a coarse dispersion of insoluble or sparingly soluble solid particles (typically 0.5&ndash;5 &mu;m) in a liquid medium, stabilized by suspending agents. It is a thermodynamically unstable system.</p>
+
+<h4>Factors Affecting Stability of Suspension:</h4>
+
+<p><strong>A. Particle-Related Factors:</strong></p>
+<ol>
+<li><strong>Particle Size:</strong> Smaller particles settle slower (Stokes' law: v &prop; r&sup2;), but too fine particles (&lt; 0.1 &mu;m) may form hard cakes due to high surface energy. Optimum size: 0.5&ndash;10 &mu;m for oral, 10&ndash;50 &mu;m for topical.</li>
+<li><strong>Particle Size Distribution:</strong> Broad distribution allows fine particles to fill voids between coarse ones, reducing porosity of sediment and increasing sediment volume &rarr; easier redispersion.</li>
+<li><strong>Density of Particles:</strong> Closer the density of particles to that of dispersion medium, slower the sedimentation. Density-adjusting agents (e.g., sorbitol, glycerin, PEG) can be added to the medium.</li>
+<li><strong>Particle Shape:</strong> Spherical particles settle faster but form dense sediment. Irregular particles settle slower but may interlock.</li>
+</ol>
+
+<p><strong>B. Medium-Related Factors:</strong></p>
+<ol start="5">
+<li><strong>Viscosity of Medium:</strong> Higher viscosity reduces sedimentation rate (Stokes' law). Viscosity enhancers: MC, HPMC, CMC, xanthan gum, tragacanth. But excessive viscosity may hinder pouring and redispersion.</li>
+<li><strong>pH:</strong> Affects drug solubility, zeta potential, and stability of suspending agents. Drug should be insoluble at working pH to prevent Ostwald ripening and crystal growth.</li>
+<li><strong>Density of Medium:</strong> Increasing medium density (using sorbitol, PEG, glycerin) reduces (&rho; &minus; &rho;<sub>0</sub>) &rarr; slower sedimentation.</li>
+</ol>
+
+<p><strong>C. Interfacial/Electrical Factors:</strong></p>
+<ol start="8">
+<li><strong>Wetting:</strong> Hydrophobic particles must be wetted by wetting agents (polysorbate 80, SLS) to prevent entrapped air and floating.</li>
+<li><strong>Zeta Potential &amp; Flocculation:</strong>
+  <ul>
+  <li>High zeta potential &rarr; deflocculated &rarr; slow settling but hard cake.</li>
+  <li>Controlled zeta potential (moderate) &rarr; flocculated &rarr; faster settling but loose sediment, easy redispersion.</li>
+  <li>Flocculating agents: electrolytes, polymers, surfactants.</li>
+  </ul>
+</li>
+</ol>
+
+<p><strong>D. Environmental Factors:</strong></p>
+<ol start="10">
+<li><strong>Temperature:</strong> Affects viscosity, solubility, and polymorphic transitions. Freezing can cause irreversible aggregation.</li>
+<li><strong>Light:</strong> May cause photochemical degradation of drug or suspending agent.</li>
+</ol>
+
+<p><strong>E. Formulation Factors:</strong></p>
+<ol start="12">
+<li><strong>Preservatives:</strong> Must be effective in the presence of suspending agents (some gums inactivate preservatives).</li>
+<li><strong>Order of Mixing:</strong> Wrong order can cause localized high concentrations, lumps, or premature flocculation.</li>
+<li><strong>Container:</strong> Adequate headspace for shaking. Wide-mouth containers preferred.</li>
+</ol>
+
+<hr style="margin:24px 0;border:none;border-top:2px dashed var(--border)">
+
+<div class="or-badge">OPTION (a) OR &ndash; Ostwald Viscometer</div>
+
+<h4>Principle:</h4>
+<p>The Ostwald viscometer (U-tube viscometer) works on the principle of <strong>Poiseuille's law for laminar flow through a capillary tube</strong>. The time taken for a fixed volume of liquid to flow under gravity through a capillary of known dimensions is measured. This time is proportional to the kinematic viscosity of the liquid.</p>
+
+<p><strong>Poiseuille's Equation:</strong></p>
+<div class="eq-block">&eta; = &pi;r<sup>4</sup>&Delta;Pt / (8lV)</div>
+<p>Where: &eta; = viscosity, r = capillary radius, &Delta;P = pressure difference, t = flow time, l = capillary length, V = volume of liquid.</p>
+
+<p>For gravity-driven flow, &Delta;P = h&rho;g, so:</p>
+<div class="eq-block">&nu; = &eta;/&rho; = &pi;r<sup>4</sup>hgt / (8lV) = K &times; t</div>
+<p>Where K is the viscometer constant. Thus, <strong>kinematic viscosity is directly proportional to flow time</strong>.</p>
+
+<div class="ascii-diagram">
+            ┌─── Bulb B ───┐
+            │   (upper)    │
+            │              │
+  Arm 1     │              │      Arm 2
+  ┌────┐    │    ┌──┐      │    ┌────┐
+  │    │    │    │  │      │    │    │
+  │    │    └────┤  ├──────┘    │    │
+  │    │         │  │ Capillary │    │
+  │    │         │  │ (r, l)   │    │
+  │    │         └──┘          │    │
+  │    │                       │    │
+  └────┘    ┌─── Bulb A ───┐    └────┘
+           │   (lower)     │
+           └───────────────┘
+  
+  Markings: m<sub>1</sub> (upper) and m<sub>2</sub> (lower) on Bulb A
+  Liquid flows from m<sub>1</sub> to m<sub>2</sub> through capillary
+</div>
+
+<h4>Working Procedure:</h4>
+<ol>
+<li><strong>Clean and dry</strong> the viscometer.</li>
+<li><strong>Mount vertically</strong> in a constant temperature water bath (usually 25&deg;C or 37&deg;C).</li>
+<li><strong>Pipette the liquid</strong> into Bulb A (lower bulb) through Arm 2, up to the mark m<sub>1</sub>.</li>
+<li><strong>Suction</strong> is applied to Arm 1 to draw the liquid up into Bulb B (above mark m<sub>1</sub>).</li>
+<li><strong>Allow the liquid to flow back</strong> under gravity through the capillary. Start the stopwatch when the meniscus passes mark m<sub>1</sub> and stop when it passes mark m<sub>2</sub>. Record the time (t).</li>
+<li><strong>Repeat</strong> 3 times and take the average flow time.</li>
+</ol>
+
+<h4>Calculation of Viscosity:</h4>
+
+<p><strong>For absolute viscosity (using known standard):</strong></p>
+<div class="eq-block">&eta;<sub>unknown</sub> = &eta;<sub>standard</sub> &times; (&rho;<sub>unknown</sub> &times; t<sub>unknown</sub>) / (&rho;<sub>standard</sub> &times; t<sub>standard</sub>)</div>
+
+<p><strong>Kinematic viscosity:</strong></p>
+<div class="eq-block">&nu;<sub>unknown</sub> = &nu;<sub>standard</sub> &times; t<sub>unknown</sub> / t<sub>standard</sub></div>
+
+<p>Standard liquid: usually distilled water (&nu; = 1.0038 cSt at 20&deg;C).</p>
+
+<h5>Advantages:</h5>
+<ul>
+<li>Simple, inexpensive, no moving parts</li>
+<li>Requires very small sample volume (~2&ndash;5 mL)</li>
+<li>Good precision for Newtonian fluids</li>
+</ul>
+<h5>Limitations:</h5>
+<ul>
+<li>Assumes Newtonian behavior (NOT suitable for non-Newtonian fluids)</li>
+<li>Shear rate varies during measurement (not constant)</li>
+<li>Capillary can be blocked by particles</li>
+<li>Must be perfectly vertical and temperature-controlled</li>
+</ul>
+
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> For Ostwald viscometer, always mention: (1) It measures kinematic viscosity, (2) Based on Poiseuille's law, (3) Requires comparison with standard (usually water), (4) Suitable ONLY for Newtonian fluids. Draw the U-tube diagram with bulbs, capillary, and marks.
+</div>
+
+</div></div>
+</div>
+
+</div>
+
+<script>
+(function(){
+function toggleCard(header){
+var card=header.parentElement;
+card.classList.toggle('open');
+}
+window.toggleCard=toggleCard;
+
+var dm=document.getElementById('darkToggle');
+var isDark=false;
+dm.addEventListener('click',function(){
+isDark=!isDark;
+document.body.classList.toggle('dark',isDark);
+dm.innerHTML=isDark?'&#9788;':'&#9790;';
+});
+
+var si=document.getElementById('searchInput');
+var cards=document.querySelectorAll('.q-card');
+var nr=document.getElementById('noResults');
+si.addEventListener('input',function(){
+var q=si.value.toLowerCase().trim();
+var found=0;
+cards.forEach(function(c){
+var text=c.textContent.toLowerCase();
+var match=!q||text.indexOf(q)>-1;
+c.style.display=match?'':'none';
+if(match)found++;
+});
+nr.style.display=found?'none':'block';
+});
+
+var ea=document.getElementById('expandAll');
+var allExpanded=false;
+ea.addEventListener('click',function(){
+allExpanded=!allExpanded;
+cards.forEach(function(c){
+if(c.style.display!=='none'){
+c.classList.toggle('open',allExpanded);
+}
+});
+ea.textContent=allExpanded?'Collapse All':'Expand All';
+});
+
+var contents=document.querySelectorAll('.q-content');
+contents.forEach(function(cnt){
+var btn=document.createElement('button');
+btn.className='copy-btn';
+btn.textContent='\uD83D\uDCCB Copy Answer';
+btn.addEventListener('click',function(e){
+e.stopPropagation();
+var text=cnt.innerText;
+if(navigator.clipboard&&navigator.clipboard.writeText){
+navigator.clipboard.writeText(text).then(function(){
+btn.textContent='\u2713 Copied!';
+btn.classList.add('copied');
+setTimeout(function(){
+btn.textContent='\uD83D\uDCCB Copy Answer';
+btn.classList.remove('copied');
+},2000);
+});
+}else{
+var ta=document.createElement('textarea');
+ta.value=cnt.innerText;
+ta.style.position='fixed';
+ta.style.left='-9999px';
+document.body.appendChild(ta);
+ta.select();
+document.execCommand('copy');
+document.body.removeChild(ta);
+btn.textContent='\u2713 Copied!';
+btn.classList.add('copied');
+setTimeout(function(){
+btn.textContent='\uD83D\uDCCB Copy Answer';
+btn.classList.remove('copied');
+},2000);
+}
+});
+cnt.appendChild(btn);
+});
+
+var links=document.querySelectorAll('#navLinks a');
+var sectionEls=[];
+cards.forEach(function(c){sectionEls.push(c);});
+window.addEventListener('scroll',function(){
+var scrollY=window.scrollY+120;
+var current='';
+sectionEls.forEach(function(s){
+if(s.offsetTop<=scrollY){current=s.id;}
+});
+links.forEach(function(l){
+l.classList.remove('active');
+if(l.getAttribute('data-q')===current){l.classList.add('active');}
+});
+});
+})();
+</script>
+
+
+
+  <a href="https://buntykakabhavnagari.github.io/website6/" 
+   target="_blank"
+   style="
+     text-decoration:none;
+     padding:14px 28px;
+     background:#111;
+     color:#fff;
+     border-radius:8px;
+     font-size:16px;
+     transition:all 0.3s ease;
+     box-shadow:0 4px 10px rgba(0,0,0,0.1);
+     display:inline-block;
+   "
+   onmouseover="this.style.background='#333'; this.style.transform='translateY(-2px)'"
+   onmouseout="this.style.background='#111'; this.style.transform='translateY(0)'"
+>
+  paper 6 
+</a>
+</body>
+</html>
